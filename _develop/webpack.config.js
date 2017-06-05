@@ -17,6 +17,7 @@ var constantPack = new webpack.DefinePlugin({
 
 var source = [
   'quill.js',
+  'quill-custom.js',
   'core.js',
   'blots',
   'core',
@@ -36,6 +37,7 @@ module.exports = function(env) {
     entry: {
       'quill.js': ['./quill.js'],
       'quill.core.js': ['./core.js'],
+      'quill.custom.js': ['./quill-custom.js'],
       'quill.core': './assets/core.styl',
       'quill.bubble': './assets/bubble.styl',
       'quill.snow': './assets/snow.styl',
@@ -137,7 +139,8 @@ module.exports = function(env) {
 
   if (env && env.minimize) {
     config.entry = {
-      'quill.min.js': './quill.js'
+      'quill.min.js': './quill.js',
+      'quill.custom.min.js': './quill-custom.js'
     };
     config.plugins.push(
       new webpack.optimize.UglifyJsPlugin({

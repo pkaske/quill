@@ -7,6 +7,12 @@ Quill is a modern rich text editor built for compatibility and extensibility. It
 To get started, check out the [Quill website](http://quilljs.com/) for documentation, guides, and live demos!
 
 
+## Build custom configuration
+
+```sh
+webpack --config _develop/webpack.config.js --env.minimize
+```
+
 ## Useful Links
 
 - [Demo](https://quilljs.com/)
