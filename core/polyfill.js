@@ -11,6 +11,21 @@ if (elem.classList.contains('test-class')) {
   };
 }
 
+if (!Node.prototype.getRootNode) {
+  Node.prototype.getRootNode = function(options) {
+    options = Object.assign({composed: false}, options);
+    let rootNode = document;
+    if (options.composed === false && typeof HTMLElement.prototype.attachShadow === 'function') {
+      let currentNode = this.root.parentNode;
+      while (!(currentNode === document || currentNode instanceof ShadowRoot)) {
+        currentNode = currentNode.parentNode;
+      }
+      rootNode = currentNode;
+    }
+    return rootNode;
+  };
+}
+
 if (!String.prototype.startsWith) {
   String.prototype.startsWith = function(searchString, position){
     position = position || 0;
