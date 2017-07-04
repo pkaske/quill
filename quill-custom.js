@@ -20,6 +20,7 @@ import ExtendedLink from './formats/extendedLink';
 import Script from './formats/script';
 import Strike from './formats/strike';
 import Underline from './formats/underline';
+import BlockFormat from './formats/blockformat';
 
 import Image from './formats/image';
 import Video from './formats/video';
@@ -81,6 +82,7 @@ Quill.register({
   'formats/script': Script,
   'formats/strike': Strike,
   'formats/underline': Underline,
+  'formats/blockformat': BlockFormat,
 
   'formats/image': Image,
   'formats/video': Video,
