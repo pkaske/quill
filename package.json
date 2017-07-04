@@ -79,7 +79,7 @@
     "url": "https://github.com/quilljs/quill/issues"
   },
   "scripts": {
-    "build": "webpack --config _develop/webpack.config.js; rm dist/quill.core dist/quill.bubble dist/quill.snow; cp dist/quill.custom.js /home/pk/era-core/components/era-edit/vendor/quill.custom.js",
+    "build": "webpack --config _develop/webpack.config.js --env.minimize; rm dist/quill.core dist/quill.bubble dist/quill.snow; cp dist/quill.custom.js $HOME/era-core/components/era-edit/vendor/quill.custom.js; cp dist/quill.custom.min.js /home/pk/era-core/components/era-edit/vendor/quill.custom.min.js",
     "build:release": "./_develop/scripts/release.sh",
     "start": "npm run build; foreman start -f _develop/procfile",
     "test": "npm run test:unit",
