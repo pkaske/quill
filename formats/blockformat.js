@@ -12,7 +12,7 @@ class BlockFormat extends Block {
   }
 }
 BlockFormat.blotName = 'blockformat';
-BlockFormat.tagName = 'p';
+BlockFormat.tagName = 'div';
 
 
 export default BlockFormat;
