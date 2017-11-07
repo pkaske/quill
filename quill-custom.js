@@ -15,7 +15,8 @@ import { SizeClass, SizeStyle } from './formats/size';
 
 import Bold from './formats/bold';
 import Italic from './formats/italic';
-import Link from './formats/link';
+// import Link from './formats/link';
+import ExtendedLink from './formats/extendedLink';
 import Script from './formats/script';
 import Strike from './formats/strike';
 import Underline from './formats/underline';
@@ -76,7 +77,7 @@ Quill.register({
   'formats/bold': Bold,
   'formats/code': InlineCode,
   'formats/italic': Italic,
-  'formats/link': Link,
+  'formats/extendedLink': ExtendedLink,
   'formats/script': Script,
   'formats/strike': Strike,
   'formats/underline': Underline,
