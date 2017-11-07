@@ -104,4 +104,4 @@ Quill.register({
 }, true);
 
 
-module.exports = Quill;
+export default Quill;
